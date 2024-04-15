@@ -1,0 +1,4 @@
+<button (click)="onClickListener()">Add New Design</button>
+<ul>
+  <li *ngFor="let file of files"><a [routerLink]="['/pdf-viewer', file.id]">{{file.name}}</a></li>
+</ul>
