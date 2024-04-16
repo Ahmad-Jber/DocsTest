@@ -90,7 +90,7 @@ export class PdfService {
           link.href = newFile
           link.download = fileName
           link.click();
-          // this.sendFileDataToServer({name:name,data:arrayBufferUtilities(r)});
+          this.sendFileDataToServer({name:name,data:arrayBufferUtilities(r)});
         })
       }
     });

@@ -19,7 +19,7 @@ export class PdfComponent implements AfterViewInit{
     await this._service.getPdfTemplate(this.domContainer.nativeElement).then(e => console.log(e));
   }
   async onClickListener(){
-    await this._service.save(this.nameInput.nativeElement.value).then(async e => {
+    await this._service.save(this.nameInput.nativeElement.value).then(async () => {
       await this._router.navigate(['dashboard'])
     });
   }

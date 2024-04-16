@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit{
+export class DashboardComponent implements AfterViewInit{
   public files: GetAllDto[] | undefined
   constructor(
     @Inject(DashboardService)
@@ -20,7 +20,8 @@ export class DashboardComponent implements OnInit{
     });*/
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit")
     this._dashboardService.getAllFiles().subscribe(async (files) => {
       this.files =  files;
       console.log(this.files)
