@@ -17,7 +17,7 @@ import {GetFileDto} from "../../dtos/GetFileDto";
   providedIn: 'root'
 })
 export class PdfService {
-  private _url: string = "assets/AQU.pdf";
+  private _url: string = "assets/ielts-listening-sample-tasks-2023.pdf";
   private _designer: Designer | undefined;
   private _blob: Blob;
   private file1?: FileReader;
